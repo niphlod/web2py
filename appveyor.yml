@@ -28,6 +28,7 @@ install:
 before_test:
 - ps: >-
     $PSVersionTable
+    
     gci env:
 
 test_script:
