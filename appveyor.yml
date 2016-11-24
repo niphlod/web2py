@@ -25,6 +25,11 @@ install:
   - "python --version"
   - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
 
+before_test:
+- ps: >-
+    $PSVersionTable
+    gci env:
+
 test_script:
   - python web2py.py --run_system_tests --with_coverage
 
